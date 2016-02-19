@@ -1,19 +1,22 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import unittest 
+import unittest
 import os #to read enviroment variables
-from selenium import webdriver
+from appium import webdriver
 
 class PythonTest(unittest.TestCase):
     def setUp(self):
-# Setting the desired_capabilities as indicated in https://saucelabs.com/platforms
-        self.desired_capabilities = webdriver.DesiredCapabilities.IPHONE
-        self.desired_capabilities['platform'] = 'OS X 10.6'
-        self.desired_capabilities['version'] = '5.0'
-        self.desired_capabilities['deviceName'] = 'iPhone'
+# Setting the desired_capabilities as indicated in https://wiki.saucelabs.com/display/DOCS/Platform+Configurator#/
+        self.desired_capabilities = {}
+        self.desired_capabilities['browserName']='browser'
+        self.desired_capabilities['platformName'] = 'Android'
+        self.desired_capabilities['version'] = '4.4'
+        self.desired_capabilities['appiumVersion'] = '1.4.16'
+        self.desired_capabilities['deviceName'] = 'Android Emulator'
+        self.desired_capabilities['deviceType'] = 'phone'
         self.desired_capabilities['device-orientation'] = 'portrait'
-        self.desired_capabilities['name'] = 'Mobile iOS Test with device iPhone 5.0'
+        self.desired_capabilities['name'] = 'Web App Test with Appium'
 
 #Retreiving enviroment variables
         SAUCE_USERNAME = os.environ.get('SAUCE_USERNAME')
@@ -21,7 +24,7 @@ class PythonTest(unittest.TestCase):
 
 #Accessing the Sauce Labs Cloud
         self.driver = webdriver.Remote(command_executor = ('http://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY + '@ondemand.saucelabs.com:80/wd/hub'), desired_capabilities = self.desired_capabilities)
-        self.driver.implicitly_wait(30)    
+        self.driver.implicitly_wait(30)
 
     def test_sauce(self):
         self.driver.get('http://www.google.com')

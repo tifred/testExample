@@ -3,7 +3,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import static org.junit.Assert.assertEquals;
 import java.net.URL;
-import org.openqa.selenium.By; //Part of Task I
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class WorkingSauce {
@@ -36,7 +36,7 @@ public class WorkingSauce {
   */
 
     driver.get("https://saucelabs.com/test/guinea-pig");
-	  assertEquals("I am a page title - Sauce Labs", driver.getTitle());
+    assertEquals("I am a page title - Sauce Labs", driver.getTitle());
 
 // Task I
 

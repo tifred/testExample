@@ -16,10 +16,11 @@ public class BrokenSauce {
   public static void main(String[] args) throws Exception {
 
 	/**
-	* Run this test before working on the problem. When you view the results on your dashboard, you'll that the test is marked as "Failed".
-	* Your job is to figure out why the test failed and make the changes necessary to make the test passed
+	* Run this test before working on the problem.
+  * When you view the results on your dashboard, you'll see that the test "Failed".
+	* Your job is to figure out why the test failed and make the changes necessary to make the test pass.
 	*
-	* Bonus: Once you get the test working, update the code so that when the test runs, it can reach the Sauce Labs homepage and then open the Docs page
+	* Bonus: Once you get the test working, update the code so that when the test runs, it can reach the Sauce Labs homepage * and then open the Docs page
 	*/
 
     DesiredCapabilities caps = DesiredCapabilities.chrome();

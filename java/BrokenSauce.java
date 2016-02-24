@@ -17,7 +17,8 @@ public class BrokenSauce {
 
 	/**
 	* Run this test before working on the problem.
-  * When you view the results on your dashboard, you'll see that the test "Failed".
+	* You may see errors right away on the command line when you run the java command.
+        * When you view the results on your dashboard, you'll see that the test "Failed".
 	* Your job is to figure out why the test failed and make the changes necessary to make the test pass.
 	*
 	* Bonus: Once you get the test working, update the code so that when the test runs, it can reach the Sauce Labs homepage * and then open the Docs page
@@ -28,6 +29,7 @@ public class BrokenSauce {
     caps.setCapability("browserName", "chrome");
     caps.setCapability("version", "48");
     caps.setCapability("name", "Broken Google Search");
+    caps.setCapability("idleTimeout", "20");
 
     WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
 

@@ -17,9 +17,12 @@ public class WorkingSauce {
 	/**
 	* Task I: Update the test code so when it runs, the test clicks the “I am a link” link.
 	*
-	* Task II - Comment out the code from Task I. Update the test code so when it runs, the test is able to write "Sauce" in the “I has no form” page.
+	* Task II - Comment out the code from Task I. Update the test code so when it runs, 
+	* the test is able to write "Sauce" in the text box that currently says “I has no focus”.
 	*
-	* Task III - Update the test code so when it runs, it can add an email to the email field, type in comments, and send them with a click of the “Send” button.
+	* Task III - Update the test code so when it runs, it adds an email to the email field, 
+	* adds text to the comments field, and clicks the “Send” button.
+	* Note that email will not actually be sent!
 	*
 	*/
 

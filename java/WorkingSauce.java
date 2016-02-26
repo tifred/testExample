@@ -24,6 +24,8 @@ public class WorkingSauce {
 	* adds text to the comments field, and clicks the “Send” button.
 	* Note that email will not actually be sent!
 	*
+	* Task IV - Add a capability that adds a tag to each test that is run.
+        * See this page for instructions: https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options
 	*/
 
     DesiredCapabilities caps = DesiredCapabilities.chrome();

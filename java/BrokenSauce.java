@@ -4,6 +4,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
 import java.net.URL;
 
 

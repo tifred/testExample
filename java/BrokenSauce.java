@@ -4,6 +4,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
 import java.net.URL;
 
 
@@ -17,10 +18,12 @@ public class BrokenSauce {
 
 	/**
 	* Run this test before working on the problem.
-  * When you view the results on your dashboard, you'll see that the test "Failed".
+        * When you view the results on your dashboard, you'll see that the test "Failed".
 	* Your job is to figure out why the test failed and make the changes necessary to make the test pass.
 	*
-	* Bonus: Once you get the test working, update the code so that when the test runs, it can reach the Sauce Labs homepage * and then open the Docs page
+	* Bonus: Once you get the test working, update the code so that when the test runs, it 
+	* can reach the Sauce Labs homepage 
+	* and then open the Docs page
 	*/
 
     DesiredCapabilities caps = DesiredCapabilities.chrome();
@@ -30,6 +33,7 @@ public class BrokenSauce {
     caps.setCapability("name", "Broken Google Search");
 
     WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     driver.get("www.google.com/");
     WebElement search = driver.findElement(By.name("Search"));
@@ -37,7 +41,7 @@ public class BrokenSauce {
     search.sendKeys("Sauce Labs");
     search.submit();
 
-    driver.findElement(By.cssSelector("a[href*='saucelabs.com']")).click();
+    WebElement page = driver.findElement(By.partialLinkText("Sauce"));
 
     driver.quit();
   }

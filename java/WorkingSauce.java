@@ -15,13 +15,13 @@ public class WorkingSauce {
   public static void main(String[] args) throws Exception {
 
 	/**
-	* Task I: Update the test code so when it runs, the test clicks the “I am a link” link.
+	* Task I: Update the test code so when it runs, the test clicks the "I am a link" link.
 	*
 	* Task II - Comment out the code from Task I. Update the test code so when it runs, 
-	* the test is able to write "Sauce" in the text box that currently says “I has no focus”.
+	* the test is able to write "Sauce" in the text box that currently says "I has no focus".
 	*
 	* Task III - Update the test code so when it runs, it adds an email to the email field, 
-	* adds text to the comments field, and clicks the “Send” button.
+	* adds text to the comments field, and clicks the "Send" button.
 	* Note that email will not actually be sent!
 	*
 	* Task IV - Add a capability that adds a tag to each test that is run.
